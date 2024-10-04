@@ -126,7 +126,9 @@ function PackingList({ items, onDeleteItem, onToggleItem, onClearList }) {
                     <option value="packed">Sort by packed status</option>
                 </select>
 
-                <button onClick={onClearList}>Clear list</button>
+                <button onClick={onClearList} disabled={!items.length}>
+                    Clear list
+                </button>
             </div>
         </div>
     );
